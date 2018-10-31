@@ -17,10 +17,8 @@ public class LockTest {
         }
     }
 
-    private static final Object object = new Object();
-
     public static void changeX() {
-        synchronized (object) {
+        synchronized (LockTest.class) {
             counter++;
         }
     }
